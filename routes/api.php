@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get("categories/pluck", "Api\CategoryController@pluck");
+Route::get("categories/pluck", "Api\CategoryController@pluck")->middleware("api-token");
 Route::get("products/pluck", "Api\ProductController@pluck");
 Route::get("categories/map", "Api\CategoryController@map");
 Route::get("products/map", "Api\ProductController@map");
@@ -35,3 +35,19 @@ Route::apiResource("users", "Api\UserController");
 Route::apiResource("products", "Api\ProductController");
 Route::apiResource("categories", "Api\CategoryController");
 
+
+Route::post("auth/login", "Api\AuthController@login");
+
+Route::middleware("api-token")->group(function (){
+    Route::get("/auth/token",function (Request $request){
+        $user = $request->user();
+
+        return response()->json([
+
+            "name" => $user->first_name,
+            "access_token" => $user->api_token,
+            "time"  => time()
+        ]);
+    });
+
+});
