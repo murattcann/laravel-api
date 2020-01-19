@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class CategoryController extends Controller
+class CategoryController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return response()->json($categories, 200);
+        return $this->apiResponse($categories, "Category fetched.",200);
 
     }
 
@@ -40,10 +40,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return response()->json([
-            "category" => $category,
-            "message" => "Category created successfully"
-        ], 201);
+        return $this->apiResponse( $category,"Category created successfully",201 );
     }
 
     /**
@@ -56,9 +53,9 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         if( !$category )
-            return response()->json(["message" => "Category not found for $id ID."], 404);
+            return $this->apiResponse(null,"Category not found for $id ID.", 404);
         else
-            return response()->json($category, 200);
+            return $this->apiResponse($category,"Category found.", 200);
     }
 
     /**
@@ -76,10 +73,7 @@ class CategoryController extends Controller
        $category->slug = Str::slug($title);
        $category->save();
 
-        return response()->json([
-            "category" => $category,
-            "message" => "Category updated successfully"
-        ], 200);
+        return $this->apiResponse($category,"Category updated successfully", 200);
     }
 
     /**
@@ -92,7 +86,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return response()->json(["message" => "Category deleted successfully"], 200);
+        return $this->apiResponse(null, "Category deleted successfully", 200);
     }
 
     public function pluck(){

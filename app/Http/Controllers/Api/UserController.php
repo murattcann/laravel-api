@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserStoreRequest;
 use App\Http\Resources\UserCollection;
 use App\Http\Resources\UserResource;
 use App\User;
@@ -10,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class UserController extends Controller
+class UserController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +29,7 @@ class UserController extends Controller
         $query = User::query();
 
         if(request()->has("q"))
-            $query->where('name','like', '%'.$q.'%')->get();
+            $query->where('first_name','like', '%'.$q.'%')->orWhere("last_name","like",'%'.$q.'%')->get();
 
 
         // for sorting
@@ -42,7 +43,7 @@ class UserController extends Controller
         $limit  = \request()->has("limit")  ? \request()->query("limit") : 10;
 
         $data = $query->offset($offset)->limit($limit)->get();
-        return response()->json($data, 200);
+        return $this->apiResponse($data,"Users fetched.", 200);
     }
 
     /**
@@ -51,21 +52,19 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
         $data = $request->all();
 
         $user = new User();
 
-        $user ->name      = $data["name"];
+        $user->first_name = $data["first_name"];
+        $user->last_name  = $data["last_name"];
         $user ->email = $data["email"];
         $user ->password  = Hash::make($data["password"]);
         $user->save();
 
-        return response()->json([
-            "user" => $user,
-            "message" => "User created successfully"
-        ], 201);
+        return$this->apiResponse($user, "User created successfully", 201);
     }
 
     /**
@@ -78,9 +77,9 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if(!$user)
-            return response()->json(["message" => "User not found for $id ID."], 404);
+            return $this->apiResponse(null,"User not found for $id ID.", 404);
         else
-            return response()->json($user, 200);
+            return $this->apiResponse($user,"User found", 200);
     }
 
     /**
@@ -99,10 +98,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return response()->json([
-            "user" => $user,
-            "message" => "User updated successfully"
-        ]);
+        return $this->apiResponse($user,"User updated successfully", 200);
     }
 
     /**
@@ -115,7 +111,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return response()->json(["message" => "User deleted successfully"], 200);
+        return $this->apiResponse(null,"User deleted successfully", 200);
     }
 
     public function customResource(){
