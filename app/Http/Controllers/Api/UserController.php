@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class UserController extends Controller
+class UserController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -42,7 +42,7 @@ class UserController extends Controller
         $limit  = \request()->has("limit")  ? \request()->query("limit") : 10;
 
         $data = $query->offset($offset)->limit($limit)->get();
-        return response()->json($data, 200);
+        return $this->apiResponse($data,"Users fetched.", 200);
     }
 
     /**
@@ -62,10 +62,7 @@ class UserController extends Controller
         $user ->password  = Hash::make($data["password"]);
         $user->save();
 
-        return response()->json([
-            "user" => $user,
-            "message" => "User created successfully"
-        ], 201);
+        return$this->apiResponse($user, "User created successfully", 201);
     }
 
     /**
@@ -78,9 +75,9 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if(!$user)
-            return response()->json(["message" => "User not found for $id ID."], 404);
+            return $this->apiResponse(null,"User not found for $id ID.", 404);
         else
-            return response()->json($user, 200);
+            return $this->apiResponse($user,"User found", 200);
     }
 
     /**
@@ -99,10 +96,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return response()->json([
-            "user" => $user,
-            "message" => "User updated successfully"
-        ]);
+        return $this->apiResponse($user,"User updated successfully", 200);
     }
 
     /**
@@ -115,7 +109,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return response()->json(["message" => "User deleted successfully"], 200);
+        return $this->apiResponse(null,"User deleted successfully", 200);
     }
 
     public function customResource(){
