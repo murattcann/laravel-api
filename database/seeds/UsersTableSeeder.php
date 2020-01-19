@@ -17,6 +17,8 @@ class UsersTableSeeder extends Seeder
             "last_name" => "CAN",
             "email" => "muratcan.php@gmail.com",
             "password" => \Illuminate\Support\Facades\Hash::make("123"),
+            "remember_token" => \Illuminate\Support\Str::random(10),
+            "api_token" => \Illuminate\Support\Str::random(10)
         ];
 
         DB::table("users")->insert($data);
@@ -26,7 +28,9 @@ class UsersTableSeeder extends Seeder
                 "first_name" => $faker->firstName,
                 "last_name" => $faker->lastName,
                 "email" => $faker->companyEmail,
-                "password" => \Illuminate\Support\Facades\Hash::make("123")
+                "password" => \Illuminate\Support\Facades\Hash::make("123"),
+                "remember_token" => \Illuminate\Support\Str::random(10),
+                "api_token" => \Illuminate\Support\Str::random(10)
             ];
 
             DB::table("users")->insert($users);

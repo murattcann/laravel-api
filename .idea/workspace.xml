@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2652ed17-72e1-4dca-beb3-c98dfb6dc012" name="Default Changelist" comment="" />
+    <list default="true" id="2652ed17-72e1-4dca-beb3-c98dfb6dc012" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ApiToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_19_194631_add_api_token_to_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravelApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +46,39 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="laravel-api@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="laravel-api@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="laravel-api@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="laravel-api: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -102,16 +169,20 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WXcIEzE41hefIOCdxVsN0n0C2w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../apiTest" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -133,7 +204,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:laravel-api@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -152,33 +228,78 @@
       <updated>1579299297645</updated>
       <workItem from="1579299300533" duration="13153000" />
       <workItem from="1579378344513" duration="6383000" />
-      <workItem from="1579389259549" duration="3016000" />
+      <workItem from="1579389259549" duration="6803000" />
+      <workItem from="1579446200875" duration="7225000" />
     </task>
+    <task id="LOCAL-00001" summary="ApiController created and extended by other api controllers.">
+      <created>1579394185637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579394185637</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Custom request and validation messages created.">
+      <created>1579457760251</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579457760251</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ApiController created and extended by other api controllers." />
+    <MESSAGE value="Custom request and validation messages created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Custom request and validation messages created." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579310428002">
+    <state x="278" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579463358331">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579310428002" />
+    <state x="278" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1579463358331" />
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579395617453">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395617453" />
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1579457760004">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579457760004" />
+    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog" timestamp="1579457719413">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog/0.27.1366.741@0.27.1366.741" timestamp="1579457719413" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579299560713">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1579299560713" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1579463393284">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/0.27.1366.741@0.27.1366.741" timestamp="1579463393284" />
+    <state x="413" y="210" width="537" height="373" key="NewPhpClassDialog" timestamp="1579395604301">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="413" y="210" width="537" height="373" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395604301" />
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579457769119">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579457769119" />
     <state x="347" y="39" width="662" height="715" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579307099271">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="39" width="662" height="715" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1579307099271" />
-    <state x="347" y="175" key="run.anything.popup" timestamp="1579307904499">
+    <state x="347" y="175" key="run.anything.popup" timestamp="1579465176163">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1579307904499" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579392139630">
+    <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1579465176163" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579466714324">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579392139630" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579466714324" />
   </component>
 </project>
