@@ -9,7 +9,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class ProductController extends Controller
+class ProductController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -42,7 +42,8 @@ class ProductController extends Controller
 
         $data = $query->offset($offset)->limit($limit)->get();
         $data->makeHidden('slug');
-        return response()->json($data, 200);
+
+        return $this->apiResponse($data, "Products Fetched.", 200);
     }
 
     /**
@@ -64,10 +65,7 @@ class ProductController extends Controller
 
        $product->save();
 
-       return response()->json([
-           "product" => $product,
-           "message" => "Product created successfully"
-       ], 201);
+       return $this->apiResponse($product, "Product created successfully", 201);
     }
 
     /**
@@ -80,9 +78,9 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         if(!$product)
-            return response()->json(["message" => "Product not found for $id ID."], 404);
+            return $this->apiResponse(null,"Product not found for $id ID.", 404);
         else
-            return response()->json($product, 200);
+            return $this->apiResponse($product,"Product found.", 200);
 
     }
 
@@ -101,10 +99,7 @@ class ProductController extends Controller
 
         $product->update($data);
 
-        return response()->json([
-            "product" => $product,
-            "message" => "Product updated successfully"
-        ]);
+        return $this->apiResponse($product,"Product updated successfully", 200);
     }
 
     /**
@@ -118,7 +113,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return response()->json(["message" => "Product deleted successfully"], 200);
+        return $this->apiResponse(null,"Product deleted successfully", 200);
     }
 
     public function pluck(){
