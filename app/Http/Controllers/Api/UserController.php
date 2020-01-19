@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserStoreRequest;
 use App\Http\Resources\UserCollection;
 use App\Http\Resources\UserResource;
 use App\User;
@@ -28,7 +29,7 @@ class UserController extends ApiController
         $query = User::query();
 
         if(request()->has("q"))
-            $query->where('name','like', '%'.$q.'%')->get();
+            $query->where('first_name','like', '%'.$q.'%')->orWhere("last_name","like",'%'.$q.'%')->get();
 
 
         // for sorting
@@ -51,13 +52,14 @@ class UserController extends ApiController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
         $data = $request->all();
 
         $user = new User();
 
-        $user ->name      = $data["name"];
+        $user->first_name = $data["first_name"];
+        $user->last_name  = $data["last_name"];
         $user ->email = $data["email"];
         $user ->password  = Hash::make($data["password"]);
         $user->save();
