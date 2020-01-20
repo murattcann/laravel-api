@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2652ed17-72e1-4dca-beb3-c98dfb6dc012" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UploadRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/upload.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ApiLogger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +204,7 @@
       <workItem from="1579299300533" duration="13153000" />
       <workItem from="1579378344513" duration="6383000" />
       <workItem from="1579389259549" duration="6803000" />
-      <workItem from="1579446200875" duration="11143000" />
+      <workItem from="1579446200875" duration="12901000" />
     </task>
     <task id="LOCAL-00001" summary="ApiController created and extended by other api controllers.">
       <created>1579394185637</created>
@@ -232,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579467059742</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Image upload operations created.">
+      <created>1579479739817</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579479739817</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +244,8 @@
     <MESSAGE value="ApiController created and extended by other api controllers." />
     <MESSAGE value="Custom request and validation messages created." />
     <MESSAGE value="Authentication operations created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Authentication operations created." />
+    <MESSAGE value="Image upload operations created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Image upload operations created." />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579463358331">
@@ -257,14 +260,14 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395617453" />
-    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1579467059377">
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1579481505448">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579467059377" />
-    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog" timestamp="1579457719413">
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579481505448" />
+    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog" timestamp="1579479821409">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog/0.27.1366.741@0.27.1366.741" timestamp="1579457719413" />
+    <state x="100" y="125" width="1166" height="543" key="DiffContextDialog/0.27.1366.741@0.27.1366.741" timestamp="1579479821409" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579299560713">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -277,21 +280,21 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="413" y="210" width="537" height="373" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395604301" />
-    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579467076070">
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579479750329">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579467076070" />
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579479750329" />
     <state x="347" y="39" width="662" height="715" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579307099271">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="39" width="662" height="715" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1579307099271" />
-    <state x="347" y="175" key="run.anything.popup" timestamp="1579465176163">
+    <state x="347" y="175" key="run.anything.popup" timestamp="1579480592583">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1579465176163" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579468316546">
+    <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1579480592583" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579480970488">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579468316546" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579480970488" />
   </component>
 </project>
