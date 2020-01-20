@@ -38,6 +38,8 @@ Route::apiResource("categories", "Api\CategoryController");
 
 Route::post("auth/login", "Api\AuthController@login");
 
+Route::post("upload", "Api\UploadController@upload");
+
 Route::middleware("api-token")->group(function (){
     Route::get("/auth/token",function (Request $request){
         $user = $request->user();
