@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2652ed17-72e1-4dca-beb3-c98dfb6dc012" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/ApiToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_19_194631_add_api_token_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelApi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UploadRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/upload.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -184,7 +159,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../apiTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,6 +167,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -229,7 +209,7 @@
       <workItem from="1579299300533" duration="13153000" />
       <workItem from="1579378344513" duration="6383000" />
       <workItem from="1579389259549" duration="6803000" />
-      <workItem from="1579446200875" duration="7225000" />
+      <workItem from="1579446200875" duration="11143000" />
     </task>
     <task id="LOCAL-00001" summary="ApiController created and extended by other api controllers.">
       <created>1579394185637</created>
@@ -245,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579457760251</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Authentication operations created.">
+      <created>1579467059742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579467059742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,21 +241,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ApiController created and extended by other api controllers." />
     <MESSAGE value="Custom request and validation messages created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom request and validation messages created." />
+    <MESSAGE value="Authentication operations created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication operations created." />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579463358331">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="278" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1579463358331" />
+    <state x="375" y="201" width="596" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579468719713">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="375" y="201" width="596" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1579468719713" />
     <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579395617453">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395617453" />
-    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1579457760004">
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1579467059377">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579457760004" />
+    <state x="248" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579467059377" />
     <state x="100" y="125" width="1166" height="543" key="DiffContextDialog" timestamp="1579457719413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -285,10 +277,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="413" y="210" width="537" height="373" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1579395604301" />
-    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579457769119">
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579467076070">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579457769119" />
+    <state x="278" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579467076070" />
     <state x="347" y="39" width="662" height="715" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579307099271">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -297,9 +289,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1579465176163" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579466714324">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579468316546">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579466714324" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579468316546" />
   </component>
 </project>
